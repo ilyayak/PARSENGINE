@@ -19,10 +19,12 @@ while True:
            price = el.select('.static > .price-container > .price')
            print(title[0].text)
            print(price[0].text)
-
+    data = {'name': name,
+            'price':price}
         page += 1
     else:
         break
+
 def write_csv(data):
     with open('coinmarketcap.csv','a') as f:
         writer = csv.writer(f)
